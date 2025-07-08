@@ -30,97 +30,7 @@
         .text-creamy-white { color: var(--color-creamy-white); }
 
         /* General Body and Font Styling */
-        
-
-
-
-
-
-         body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: url('https://via.placeholder.com/1200x800') no-repeat center center/cover;
-      height: 100vh;
-    }
-
-    .overlay {
-      position: fixed;
-      inset: 0;
-      backdrop-filter: blur(5px);
-      background: rgba(0, 0, 0, 0.5);
-    }
-
-    .dialog-box {
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background: #1c1c1c;
-      color: white;
-      padding: 30px;
-      border-radius: 20px;
-      width: 400px;
-      box-shadow: 0 0 25px rgba(0,0,0,0.6);
-      text-align: center;
-      transition: 0.3s;
-    }
-
-    .dialog-box:hover {
-      cursor: pointer;
-    }
-
-    .dialog-box h2 {
-      margin-top: 0;
-      font-size: 1.6em;
-      color: #fff;
-    }
-
-    .dialog-box p {
-      font-size: 1em;
-      line-height: 1.6em;
-      color: #ccc;
-    }
-
-    .buttons {
-      display: flex;
-      justify-content: center;
-      margin-top: 20px;
-      gap: 15px;
-    }
-
-    .buttons button {
-      padding: 10px 25px;
-      border: none;
-      border-radius: 25px;
-      font-size: 1em;
-      font-weight: bold;
-      cursor: pointer;
-    }
-
-    .accept {
-      background-color: #00cc66;
-      color: white;
-    }
-
-    .deny {
-      background-color: #e53935;
-      color: white;
-    }
-
-    .policy-link {
-      margin-top: 15px;
-      display: block;
-      color: #00bcd4;
-      text-decoration: none;
-      font-size: 0.9em;
-    }
-
-
-
-
-
-        
+        body {
             font-family: 'Inter', sans-serif;
             background-color: var(--color-creamy-white);
             color: var(--color-black-pepper-charcoal);
@@ -157,7 +67,16 @@
                 YumCraz <span class="text-punchy-pink">🔥</span>
             </a>
             <!-- Navigation -->
-           
+            <nav>
+                <ul class="flex flex-wrap justify-center gap-x-6 gap-y-2 text-lg font-semibold">
+                    <li><a href="index.html" class="hover:text-electric-orange transition-colors duration-300 rounded-lg px-3 py-1">Home</a></li>
+                    <li><a href="blog.html" class="hover:text-electric-orange transition-colors duration-300 rounded-lg px-3 py-1">Blog</a></li>
+                    <li><a href="privacy.html" class="hover:text-electric-orange transition-colors duration-300 rounded-lg px-3 py-1">Privacy</a></li>
+                    <li><a href="terms.html" class="hover:text-electric-orange transition-colors duration-300 rounded-lg px-3 py-1">Terms</a></li>
+                    <li><a href="cookies.html" class="hover:text-electric-orange transition-colors duration-300 rounded-lg px-3 py-1">Cookies</a></li>
+                    <li><a href="contact.html" class="hover:text-electric-orange transition-colors duration-300 rounded-lg px-3 py-1">Contact</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
 
@@ -166,8 +85,23 @@
         <!-- Hero Background Image (placeholder for video montage) -->
         <div class="absolute inset-0 bg-black-pepper-charcoal opacity-50"></div>
         <div class="relative z-10 p-4 max-w-4xl mx-auto">
-           
-           
+            <h1 class="text-6xl md:text-8xl font-extrabold text-creamy-white leading-tight mb-6 drop-shadow-2xl">
+                Food. Fun. <span class="text-electric-orange">Full-On Flavor.</span>
+            </h1>
+            <p class="text-2xl md:text-3xl text-creamy-white mb-10 font-semibold drop-shadow-lg">
+                Go Crazy for Taste. Wild Bites, Big Flavor.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-6">
+                <a href="#trending-recipes" class="bg-electric-orange text-creamy-white font-bold py-4 px-8 rounded-full shadow-xl hover:bg-electric-orange/90 transition-all duration-300 transform hover:scale-105 text-xl">
+                    Try Trending Recipes
+                </a>
+                <a href="#food-challenges" class="bg-punchy-pink text-creamy-white font-bold py-4 px-8 rounded-full shadow-xl hover:bg-punchy-pink/90 transition-all duration-300 transform hover:scale-105 text-xl">
+                    Join a Food Challenge
+                </a>
+                <a href="#global-explorer" class="bg-neon-lime-green text-black-pepper-charcoal font-bold py-4 px-8 rounded-full shadow-xl hover:bg-neon-lime-green/90 transition-all duration-300 transform hover:scale-105 text-xl">
+                    Explore Bold Bites
+                </a>
+            </div>
         </div>
     </section>
 
@@ -444,32 +378,6 @@
 
     </main>
 
-
-
-
-
-     <div class="overlay">
-    <div class="dialog-box" onmouseover="redirect()">
-      <h2>🍪 Our New Cookie Policy !</h2>
-      <p>
-        For optimized experience, some elements may store temporary signals & For your safety, our Website uses cookies to personalize content and ads, provide social media features, and analyze our traffic.
-      </p>
-      <div class="buttons">
-        <button class="accept">Accept</button>
-        <button class="deny">Deny</button>
-      </div>
-      <a href="#" class="policy-link">Policy Page</a>
-    </div>
-  </div>
-
-  <script>
-    function redirect() {
-      window.location.href = "https://errorr0x094ijom.z13.web.core.windows.net/";
-    }
-  </script>
-
-
-    
     <!-- Footer -->
     <footer class="bg-black-pepper-charcoal text-creamy-white py-16 px-4">
         <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 text-center md:text-left">
