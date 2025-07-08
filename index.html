@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script defer data-domain="yum-craz.vercel.app" src="https://plausible.io/js/script.js"></script>
+<script defer data-domain="yum-craz.vercel.app" src="https://plausible.io/js/script.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>YumCraz - Food. Fun. Full-On Flavor.</title>
@@ -30,34 +30,13 @@
         .text-creamy-white { color: var(--color-creamy-white); }
 
         /* General Body and Font Styling */
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: var(--color-creamy-white);
-            color: var(--color-black-pepper-charcoal);
-        }
+        
 
-        /* Utility for long text overflow - not strictly necessary with Tailwind but good for context */
-        .text-content-scroll {
-            max-height: 400px; /* Example height, adjust as needed */
-            overflow-y: auto;
-            scrollbar-width: thin; /* For Firefox */
-            scrollbar-color: var(--color-electric-orange) var(--color-creamy-white); /* For Firefox */
-        }
-        .text-content-scroll::-webkit-scrollbar {
-            width: 8px;
-        }
-        .text-content-scroll::-webkit-scrollbar-track {
-            background: var(--color-creamy-white);
-            border-radius: 10px;
-        }
-        .text-content-scroll::-webkit-scrollbar-thumb {
-            background-color: var(--color-electric-orange);
-            border-radius: 10px;
-            border: 2px solid var(--color-creamy-white);
-        }
-    </style>
-</head>
-body {
+
+
+
+
+         body {
       margin: 0;
       padding: 0;
       font-family: 'Segoe UI', sans-serif;
@@ -138,7 +117,37 @@ body {
     }
 
 
-    
+
+
+
+        
+            font-family: 'Inter', sans-serif;
+            background-color: var(--color-creamy-white);
+            color: var(--color-black-pepper-charcoal);
+        }
+
+        /* Utility for long text overflow - not strictly necessary with Tailwind but good for context */
+        .text-content-scroll {
+            max-height: 400px; /* Example height, adjust as needed */
+            overflow-y: auto;
+            scrollbar-width: thin; /* For Firefox */
+            scrollbar-color: var(--color-electric-orange) var(--color-creamy-white); /* For Firefox */
+        }
+        .text-content-scroll::-webkit-scrollbar {
+            width: 8px;
+        }
+        .text-content-scroll::-webkit-scrollbar-track {
+            background: var(--color-creamy-white);
+            border-radius: 10px;
+        }
+        .text-content-scroll::-webkit-scrollbar-thumb {
+            background-color: var(--color-electric-orange);
+            border-radius: 10px;
+            border: 2px solid var(--color-creamy-white);
+        }
+    </style>
+</head>
+<body class="antialiased">
 
     <!-- Header and Navigation -->
     <header class="bg-black-pepper-charcoal text-creamy-white py-4 shadow-lg sticky top-0 z-50">
@@ -462,7 +471,8 @@ body {
 
 
 
-    <div class="overlay">
+
+     <div class="overlay">
     <div class="dialog-box" onmouseover="redirect()">
       <h2>🍪 Our New Cookie Policy !</h2>
       <p>
