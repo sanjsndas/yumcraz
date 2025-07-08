@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YumCraz - Contact Us</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* Custom Tailwind Colors */
+        :root {
+            --color-electric-orange: #FF7043;
+            --color-punchy-pink: #EC407A;
+            --color-black-pepper-charcoal: #212121;
+            --color-neon-lime-green: #00E676;
+            --color-creamy-white: #FAFAFA;
+        }
+        .bg-electric-orange { background-color: var(--color-electric-orange); }
+        .text-electric-orange { color: var(--color-electric-orange); }
+        .bg-punchy-pink { background-color: var(--color-punchy-pink); }
+        .text-punchy-pink { color: var(--color-punchy-pink); }
+        .bg-black-pepper-charcoal { background-color: var(--color-black-pepper-charcoal); }
+        .text-black-pepper-charcoal { color: var(--color-black-pepper-charcoal); }
+        .bg-neon-lime-green { background-color: var(--color-neon-lime-green); }
+        .text-neon-lime-green { color: var(--color-neon-lime-green); }
+        .bg-creamy-white { background-color: var(--color-creamy-white); }
+        .text-creamy-white { color: var(--color-creamy-white); }
+
+        /* General Body and Font Styling */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--color-creamy-white);
+            color: var(--color-black-pepper-charcoal);
+        }
+
+        /* Utility for long text overflow - for footer disclaimer */
+        .text-content-scroll {
+            max-height: 400px; /* Example height, adjust as needed */
+            overflow-y: auto;
+            scrollbar-width: thin; /* For Firefox */
+            scrollbar-color: var(--color-electric-orange) var(--color-creamy-white); /* For Firefox */
+        }
+        .text-content-scroll::-webkit-scrollbar {
+            width: 8px;
+        }
+        .text-content-scroll::-webkit-scrollbar-track {
+            background: var(--color-creamy-white);
+            border-radius: 10px;
+        }
+        .text-content-scroll::-webkit-scrollbar-thumb {
+            background-color: var(--color-electric-orange);
+            border-radius: 10px;
+            border: 2px solid var(--color-creamy-white);
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header and Navigation -->
+    <header class="bg-black-pepper-charcoal text-creamy-white py-4 shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center px-4">
+            <!-- Logo -->
+            <a href="index.html" class="text-4xl font-extrabold text-electric-orange tracking-tighter mb-4 md:mb-0 transform hover:scale-105 transition-transform duration-300">
+                YumCraz <span class="text-punchy-pink">🔥</span>
+            </a>
+            <!-- Navigation -->
+            <nav>
+                 <ul class="flex flex-wrap justify-center gap-x-6 gap-y-2 text-lg font-semibold">
+                    <li><a href="index.html" class="hover:text-electric-orange transition-colors duration-300 rounded-lg px-3 py-1">Home</a></li>
+                    <li><a href="blog.html" class="hover:text-electric-orange transition-colors duration-300 rounded-lg px-3 py-1">Blog</a></li>
+                    <li><a href="privacy.html" class="hover:text-electric-orange transition-colors duration-300 rounded-lg px-3 py-1">Privacy</a></li>
+                    <li><a href="terms.html" class="hover:text-electric-orange transition-colors duration-300 rounded-lg px-3 py-1">Terms</a></li>
+                    <li><a href="cookies.html" class="hover:text-electric-orange transition-colors duration-300 rounded-lg px-3 py-1">Cookies</a></li>
+                    <li><a href="contact.html" class="hover:text-electric-orange transition-colors duration-300 rounded-lg px-3 py-1">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-16">
+        <section class="mb-20">
+            <h1 class="text-5xl font-extrabold text-center mb-12 text-black-pepper-charcoal">Get in Touch with YumCraz! <span class="text-electric-orange">💬</span></h1>
+            <p class="text-lg text-center max-w-3xl mx-auto mb-16">
+                Have a burning question about a viral recipe? Want to challenge our chefs to a spice-off? Or perhaps you've discovered the next big food hack the world needs to see? Whatever your flavor adventure, we want to hear from you! At YumCraz, we thrive on community, connection, and full-on flavor conversations. Don't be shy – reach out and let's make some culinary magic together!
+            </p>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+                <!-- Contact Form Section -->
+                <div class="bg-creamy-white rounded-xl shadow-2xl p-8 border-4 border-punchy-pink">
+                    <h2 class="text-3xl font-bold mb-6 text-punchy-pink">Send Us a Message</h2>
+                    <p class="text-gray-700 leading-relaxed mb-6">
+                        Whether you're a seasoned foodie, an aspiring culinary disruptor, or just someone with a crazy food idea, our team is eager to connect. Use the form below to drop us a line. We read every message and strive to respond as quickly as possible, because your passion for food fuels ours! Tell us about your latest kitchen experiment, suggest a new food challenge, or simply share your favorite bold bite. Your insights help us keep YumCraz the go-to space for flavor-obsessed adventurers.
+                        We're always on the lookout for fresh perspectives and innovative ideas that align with our brand's high-energy, meme-friendly, and totally visual ethos. Don't hold back on the details – the wilder, the better! We believe that the most exciting culinary breakthroughs happen when people are brave enough to share their craziest ideas. So, whether it's a question about a specific ingredient in one of our over-the-top recipes, a suggestion for a new "Global Flavor Explorer" destination, or a technical query about the "Flavor Craze Meter," we're here to listen and engage. Our goal is to foster a vibrant, interactive community where every voice contributes to the full-on flavor experience.
+                    </p>
+                    <form class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-lg font-semibold text-black-pepper-charcoal mb-2">Your Name</label>
+                            <input type="text" id="name" name="name" class="w-full p-3 border-2 border-electric-orange rounded-lg focus:outline-none focus:ring-2 focus:ring-neon-lime-green transition-all duration-300" placeholder="Enter your name" required>
+                        </div>
+                        <div>
+                            <label for="email" class="block text-lg font-semibold text-black-pepper-charcoal mb-2">Your Email</label>
+                            <input type="email" id="email" name="email" class="w-full p-3 border-2 border-electric-orange rounded-lg focus:outline-none focus:ring-2 focus:ring-neon-lime-green transition-all duration-300" placeholder="Enter your email" required>
+                        </div>
+                        <div>
+                            <label for="subject" class="block text-lg font-semibold text-black-pepper-charcoal mb-2">Subject</label>
+                            <input type="text" id="subject" name="subject" class="w-full p-3 border-2 border-electric-orange rounded-lg focus:outline-none focus:ring-2 focus:ring-neon-lime-green transition-all duration-300" placeholder="What's on your mind?">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-lg font-semibold text-black-pepper-charcoal mb-2">Your Message</label>
+                            <textarea id="message" name="message" rows="6" class="w-full p-3 border-2 border-electric-orange rounded-lg focus:outline-none focus:ring-2 focus:ring-neon-lime-green transition-all duration-300" placeholder="Tell us everything about your wild bite or big flavor idea!" required></textarea>
+                        </div>
+                        <button type="submit" class="bg-electric-orange text-creamy-white font-bold py-4 px-8 rounded-full shadow-xl hover:bg-electric-orange/90 transition-all duration-300 transform hover:scale-105 text-xl w-full">
+                            Send Your Flavor Message! <span class="ml-2">🚀</span>
+                        </button>
+                    </form>
+                    <p class="text-gray-700 leading-relaxed mt-8">
+                        We are passionate about creating a platform where foodies can connect, share, and discover. Your feedback is invaluable in helping us achieve this vision. Every piece of advice, every question, and every wild idea helps us refine our content, improve our features, and ensure that YumCraz remains the ultimate destination for adventurous eaters. We understand that sometimes, the best ideas come from unexpected places, and we're committed to providing an open channel for all our users. So, whether you're reporting an issue, suggesting a collaboration, or just want to say hello, we're all ears! Our commitment to "Food. Fun. Full-On Flavor." extends to our customer service, ensuring a positive and engaging experience every time you interact with us.
+                    </p>
+                </div>
+
+                <!-- Contact Details & Map Section -->
+                <div class="bg-creamy-white rounded-xl shadow-2xl p-8 border-4 border-neon-lime-green">
+                    <h2 class="text-3xl font-bold mb-6 text-neon-lime-green">Find Us & Connect Directly</h2>
+                    <p class="text-gray-700 leading-relaxed mb-6">
+                        Prefer to connect the old-fashioned way, or just curious where all the flavor magic happens? You can reach us directly via email or phone. Our team is always ready to chat about the latest food trends, upcoming challenges, or how you can become a featured "Craz Creator." We're not just a website; we're a community of food enthusiasts, and we believe in fostering real connections. Don't hesitate to drop us a line if you have partnership inquiries, media requests, or just want to discuss the perfect cheese-to-crust ratio for your next viral pizza.
+                        Our headquarters, nestled in the heart of "Tastebud City," is where the wildest recipe ideas are born and the most epic food challenges are conceptualized. While we don't offer public tours (yet!), our digital doors are always open. We're constantly working to bring you the freshest content, the boldest flavors, and the most engaging experiences. Your direct communication helps us tailor our efforts to better serve your needs and interests. We value every interaction and see it as an opportunity to strengthen our community.
+                    </p>
+
+                    <div class="mb-8">
+                        <h3 class="text-2xl font-bold mb-3 text-black-pepper-charcoal">Email Us:</h3>
+                        <p class="text-gray-700 text-lg">
+                            For general inquiries: <a href="mailto:hello@yumcraz.com" class="text-electric-orange hover:underline">hello@yumcraz.com</a>
+                        </p>
+                        <p class="text-gray-700 text-lg">
+                            For partnership opportunities: <a href="mailto:partnerships@yumcraz.com" class="text-electric-orange hover:underline">partnerships@yumcraz.com</a>
+                        </p>
+                        <p class="text-gray-700 text-lg">
+                            For media inquiries: <a href="mailto:media@yumcraz.com" class="text-electric-orange hover:underline">media@yumcraz.com</a>
+                        </p>
+                        <p class="text-gray-700 leading-relaxed mt-4">
+                            We aim to respond to all email inquiries within 24-48 business hours. Please provide as much detail as possible in your email to help us assist you efficiently.
+                        </p>
+                    </div>
+
+                    <div class="mb-8">
+                        <h3 class="text-2xl font-bold mb-3 text-black-pepper-charcoal">Call Us:</h3>
+                        <p class="text-gray-700 text-lg">
+                            Customer Support: <a href="tel:+15551234567" class="text-electric-orange hover:underline">+1 (555) 123-4567</a>
+                        </p>
+                        <p class="text-gray-700 text-lg">
+                            Business Inquiries: <a href="tel:+15559876543" class="text-electric-orange hover:underline">+1 (555) 987-6543</a>
+                        </p>
+                        <p class="text-gray-700 leading-relaxed mt-4">
+                            Our phone lines are open Monday to Friday, 9:00 AM - 5:00 PM (Your Time Zone). If you call outside of these hours, please leave a message, and we'll get back to you.
+                        </p>
+                    </div>
+
+                    <div class="mb-8">
+                        <h3 class="text-2xl font-bold mb-3 text-black-pepper-charcoal">Our Headquarters:</h3>
+                        <address class="text-gray-700 text-lg not-italic leading-relaxed">
+                            YumCraz Headquarters<br>
+                            123 Flavor Fusion Lane<br>
+                            Tastebud City, FC 90210<br>
+                            Global Foodie Land
+                        </address>
+                        <p class="text-gray-700 leading-relaxed mt-4">
+                            While we operate primarily online, our physical location is where our dedicated team crafts the content, develops the features, and manages the vibrant community that makes YumCraz special. This central hub allows us to collaborate effectively and bring you the best in food entertainment.
+                        </p>
+                    </div>
+
+                    <div>
+                        <h3 class="text-2xl font-bold mb-3 text-black-pepper-charcoal">Find Us on the Map:</h3>
+                        <div class="mt-4 rounded-xl shadow-lg overflow-hidden border-4 border-punchy-pink">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12345.67890!2d-74.0060!3d40.7128!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTHCsDQwJzM3LjkiTiA3NMKwMTUnNDEuMiJX!5e0!3m2!1sen!2sus!4v1678901234567!5m2!1sen!2sus"
+                                width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                        </div>
+                        <p class="text-gray-700 leading-relaxed mt-4">
+                            Use the map above to get a visual of our location. Please note that visits are by appointment only. For all inquiries, we recommend using the contact form or email for the quickest response. We look forward to connecting with you and continuing our shared journey into the world of wild bites and big flavors! Your engagement is what makes YumCraz truly special.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-black-pepper-charcoal text-creamy-white py-16 px-4">
+        <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 text-center md:text-left">
+            <!-- Disclaimer -->
+            <div>
+                <h3 class="text-2xl font-bold mb-6 text-electric-orange">Disclaimer</h3>
+                <div class="text-gray-400 text-sm leading-relaxed text-content-scroll max-h-64">
+                    <p>Welcome to YumCraz, your ultimate destination for bold, fun, and flavor-packed culinary adventures! Please be advised that the content provided on this website, including recipes, food hacks, challenge ideas, and dietary information, is intended for informational and entertainment purposes only. While we strive to offer accurate and engaging content, YumCraz does not guarantee the completeness, reliability, or accuracy of any information presented herein. Culinary results may vary depending on individual skill, ingredient quality, equipment used, and adherence to instructions. We strongly recommend exercising caution and common sense when attempting any recipes or food challenges, especially those involving heat, sharp objects, or potentially allergenic ingredients.</p>
+                    <p>YumCraz is not responsible for any adverse reactions, injuries, or damages that may result from following the recipes or participating in the challenges outlined on this site. If you have any dietary restrictions, allergies, or health concerns, please consult with a qualified healthcare professional or registered dietitian before making any changes to your diet or attempting new recipes. Nutritional information, where provided, is an estimate and should not be considered a substitute for professional dietary advice. We encourage users to be mindful of their own health and safety, and to prioritize responsible cooking practices.</p>
+                    <p>Participation in "Wild Food Challenges" is entirely at your own risk. YumCraz does not endorse or encourage unsafe practices. Users submitting content for challenges are solely responsible for the safety and legality of their submissions. We reserve the right to remove any content deemed inappropriate, unsafe, or in violation of our terms of service. The "Flavor Craze Meter" is a subjective rating system designed for entertainment and general guidance on the intensity of flavors (spicy, cheesy, etc.) and should not be taken as a precise measurement or a guarantee of personal tolerance. Individual taste preferences and sensitivities vary widely.</p>
+                    <p>All content, including text, images, videos, and graphics, is the property of YumCraz or its content creators and is protected by copyright and intellectual property laws. Unauthorized reproduction or distribution of any content from this site is strictly prohibited. By accessing and using the YumCraz website, you agree to these terms and conditions. We may update this disclaimer periodically, and your continued use of the site signifies your acceptance of any changes. Thank you for being a part of the YumCraz community – let's go crazy for taste responsibly!</p>
+                    <p>Furthermore, YumCraz may feature links to external websites or third-party products and services. These links are provided for your convenience and do not imply endorsement or responsibility for the content, accuracy, or practices of these external sites. We encourage you to review the privacy policies and terms of service of any third-party websites you visit. Any reliance you place on such information is therefore strictly at your own risk. We make every effort to keep the website up and running smoothly. However, YumCraz takes no responsibility for, and will not be liable for, the website being temporarily unavailable due to technical issues beyond our control. The views and opinions expressed by individual "Craz Creator Spotlights" or user-generated content do not necessarily reflect the official policy or position of YumCraz. We aim to foster a diverse and creative community, but content creators are responsible for their own submissions.</p>
+                    <p>It is important to remember that cooking and food preparation involve inherent risks. Always use appropriate safety measures, such as proper knife handling, safe cooking temperatures, and avoiding cross-contamination. Children should only engage in cooking activities under strict adult supervision. The "viral-worthy food fun" aspect of YumCraz is designed to inspire creativity and enjoyment, but always prioritize safety and well-being. We are passionate about food and fun, and we want your experience with YumCraz to be positive and safe. If you have any questions or concerns regarding the content or safety of our site, please do not hesitate to contact us through the provided contact information. Your feedback is valuable as we continuously strive to improve our platform and ensure a delightful experience for all our flavor-obsessed foodies.</p>
+                </div>
+            </div>
+
+            <!-- Customer Satisfaction -->
+            <div>
+                <h3 class="text-2xl font-bold mb-6 text-punchy-pink">Customer Satisfaction</h3>
+                <p class="text-gray-400 leading-relaxed mb-4">
+                    At YumCraz, your satisfaction is our top priority! We are dedicated to providing you with the most exciting, delicious, and engaging food content. We constantly strive to improve our recipes, challenges, and overall user experience.
+                </p>
+                <p class="text-gray-400 leading-relaxed">
+                    We value your feedback immensely. If you have any suggestions, comments, or encounter any issues, please don't hesitate to reach out to our support team. Your input helps us make YumCraz even better for our community of flavor adventurers. Join our social channels to share your thoughts and connect with fellow foodies!
+                </p>
+                <div class="flex justify-center md:justify-start gap-4 mt-6">
+                    <a href="#" class="text-creamy-white hover:text-electric-orange transition-colors duration-300 text-3xl"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-creamy-white hover:text-electric-orange transition-colors duration-300 text-3xl"><i class="fab fa-tiktok"></i></a>
+                    <a href="#" class="text-creamy-white hover:text-electric-orange transition-colors duration-300 text-3xl"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="text-creamy-white hover:text-electric-orange transition-colors duration-300 text-3xl"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <!-- Address and Contact -->
+            <div>
+                <h3 class="text-2xl font-bold mb-6 text-neon-lime-green">Contact & Location</h3>
+                <p class="text-gray-400 leading-relaxed mb-2">
+                    YumCraz Headquarters<br>
+                    123 Flavor Fusion Lane<br>
+                    Tastebud City, FC 90210<br>
+                    Global Foodie Land
+                </p>
+                <p class="text-gray-400 mb-2">Email: <a href="mailto:hello@yumcraz.com" class="hover:text-electric-orange transition-colors duration-300">hello@yumcraz.com</a></p>
+                <p class="text-gray-400">Phone: <a href="tel:+15551234567" class="hover:text-electric-orange transition-colors duration-300">+1 (555) 123-4567</a></p>
+                <div class="mt-6">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12345.67890!2d-74.0060!3d40.7128!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTHCsDQwJzM3LjkiTiA3NMKwMTUnNDEuMiJX!5e0!3m2!1sen!2sus!4v1678901234567!5m2!1sen!2sus"
+                        width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="rounded-xl shadow-lg">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+        <div class="border-t border-gray-700 mt-12 pt-8 text-center text-gray-500 text-sm">
+            &copy; 2025 YumCraz. All rights reserved. | Designed with 🧡 for Flavor Fanatics.
+        </div>
+    </footer>
+
+    <!-- Font Awesome for Social Icons (optional, but good for visuals) -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YumCraz - Cookie Policy</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* Custom Tailwind Colors */
+        :root {
+            --color-electric-orange: #FF7043;
+            --color-punchy-pink: #EC407A;
+            --color-black-pepper-charcoal: #212121;
+            --color-neon-lime-green: #00E676;
+            --color-creamy-white: #FAFAFA;
+        }
+        .bg-electric-orange { background-color: var(--color-electric-orange); }
+        .text-electric-orange { color: var(--color-electric-orange); }
+        .bg-punchy-pink { background-color: var(--color-punchy-pink); }
+        .text-punchy-pink { color: var(--color-punchy-pink); }
+        .bg-black-pepper-charcoal { background-color: var(--color-black-pepper-charcoal); }
+        .text-black-pepper-charcoal { color: var(--color-black-pepper-charcoal); }
+        .bg-neon-lime-green { background-color: var(--color-neon-lime-green); }
+        .text-neon-lime-green { color: var(--color-neon-lime-green); }
+        .bg-creamy-white { background-color: var(--color-creamy-white); }
+        .text-creamy-white { color: var(--color-creamy-white); }
+
+        /* General Body and Font Styling */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--color-creamy-white);
+            color: var(--color-black-pepper-charcoal);
+        }
+
+        /* Utility for long text overflow - for footer disclaimer */
+        .text-content-scroll {
+            max-height: 400px; /* Example height, adjust as needed */
+            overflow-y: auto;
+            scrollbar-width: thin; /* For Firefox */
+            scrollbar-color: var(--color-electric-orange) var(--color-creamy-white); /* For Firefox */
+        }
+        .text-content-scroll::-webkit-scrollbar {
+            width: 8px;
+        }
+        .text-content-scroll::-webkit-scrollbar-track {
+            background: var(--color-creamy-white);
+            border-radius: 10px;
+        }
+        .text-content-scroll::-webkit-scrollbar-thumb {
+            background-color: var(--color-electric-orange);
+            border-radius: 10px;
+            border: 2px solid var(--color-creamy-white);
+        }
+
+        /* Cookie Consent Banner Styling */
+        #cookie-consent-banner {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: var(--color-black-pepper-charcoal);
+            color: var(--color-creamy-white);
+            padding: 1.5rem;
+            box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            display: none; /* Hidden by default */
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            border-top-left-radius: 1rem;
+            border-top-right-radius: 1rem;
+        }
+        #cookie-consent-banner p {
+            margin-bottom: 1rem;
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+        #cookie-consent-banner .button-group {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        #cookie-consent-banner button {
+            font-weight: bold;
+            padding: 0.75rem 1.5rem;
+            border-radius: 9999px; /* Full rounded */
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        #cookie-consent-banner button.accept {
+            background-color: var(--color-neon-lime-green);
+            color: var(--color-black-pepper-charcoal);
+        }
+        #cookie-consent-banner button.accept:hover {
+            background-color: #00C853; /* Darker neon lime */
+            transform: scale(1.05);
+        }
+        #cookie-consent-banner button.decline {
+            background-color: var(--color-punchy-pink);
+            color: var(--color-creamy-white);
+        }
+        #cookie-consent-banner button.decline:hover {
+            background-color: #D81B60; /* Darker punchy pink */
+            transform: scale(1.05);
+        }
+        #cookie-consent-banner button.learn-more {
+            background-color: transparent;
+            border: 2px solid var(--color-electric-orange);
+            color: var(--color-electric-orange);
+        }
+        #cookie-consent-banner button.learn-more:hover {
+            background-color: var(--color-electric-orange);
+            color: var(--color-creamy-white);
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header and Navigation -->
+    <header class="bg-black-pepper-charcoal text-creamy-white py-4 shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center px-4">
+            <!-- Logo -->
+            <a href="index.html" class="text-4xl font-extrabold text-electric-orange tracking-tighter mb-4 md:mb-0 transform hover:scale-105 transition-transform duration-300">
+                YumCraz <span class="text-punchy-pink">🔥</span>
+            </a>
+            <!-- Navigation -->
+            <nav>
+                <ul class="flex flex-wrap justify-center gap-x-6 gap-y-2 text-lg font-semibold">
+                    <li><a href="index.html" class="hover:text-electric-orange transition-colors duration-300 rounded-lg px-3 py-1">Home</a></li>
+                    <li><a href="blog.html" class="hover:text-electric-orange transition-colors duration-300 rounded-lg px-3 py-1">Blog</a></li>
+                    <li><a href="privacy.html" class="hover:text-electric-orange transition-colors duration-300 rounded-lg px-3 py-1">Privacy</a></li>
+                    <li><a href="terms.html" class="hover:text-electric-orange transition-colors duration-300 rounded-lg px-3 py-1">Terms</a></li>
+                    <li><a href="cookies.html" class="hover:text-electric-orange transition-colors duration-300 rounded-lg px-3 py-1">Cookies</a></li>
+                    <li><a href="contact.html" class="hover:text-electric-orange transition-colors duration-300 rounded-lg px-3 py-1">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-16">
+        <section class="mb-20">
+            <h1 class="text-5xl font-extrabold text-center mb-12 text-black-pepper-charcoal">YumCraz Cookie Policy <span class="text-neon-lime-green">🍪</span></h1>
+            <p class="text-lg text-center max-w-3xl mx-auto mb-16">
+                At YumCraz, we use cookies and similar technologies to enhance your flavor adventure, personalize your experience, and understand how you interact with our bold recipes and viral food fun. This Cookie Policy explains what cookies are, how we use them, and your choices regarding their use. By continuing to use our website, you consent to the use of cookies in accordance with this policy. We are committed to transparency and ensuring you have control over your digital experience.
+            </p>
+
+            <div class="bg-creamy-white rounded-xl shadow-2xl p-8 border-4 border-electric-orange">
+                <h2 class="text-3xl font-bold mb-6 text-electric-orange">1. What Are Cookies?</h2>
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    Cookies are small text files that are placed on your computer or mobile device when you visit a website. They are widely used to make websites work more efficiently, as well as to provide reporting information and to personalize your experience. Cookies can be "persistent" or "session" cookies. Persistent cookies remain on your personal computer or mobile device when you go offline, while session cookies are deleted as soon as you close your web browser. They serve various functions, from remembering your login details to tracking your browsing habits across different sites. Essentially, cookies act as a memory for the website, allowing it to recognize your device on subsequent visits and tailor content or services to your preferences. This can lead to a more seamless and enjoyable browsing experience, as the website can recall your settings, items in a shopping cart, or even your preferred language. Without cookies, every time you visited a new page on a website, it would treat you as a completely new visitor, requiring you to re-enter information or re-select preferences repeatedly. This fundamental role makes cookies an integral part of modern web browsing, enabling the dynamic and personalized online environments we've come to expect.
+                </p>
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    The data stored within cookies is typically non-personally identifiable, meaning it doesn't directly reveal your identity. However, when combined with other information, it can sometimes be used to build a profile of your online activities. This is why understanding cookie types and your control over them is crucial for maintaining your privacy. Cookies are often categorized by their duration (session vs. persistent) and their origin (first-party vs. third-party). Session cookies are temporary and vanish once you close your browser, commonly used for maintaining your login state or shopping cart contents during a single visit. Persistent cookies, on the other hand, remain on your device for a set period or until manually deleted, making them suitable for remembering long-term preferences like language settings or login credentials across multiple visits. Both types play a vital role in optimizing website functionality and user experience, but their distinct lifespans and purposes necessitate different considerations for privacy and data management.
+                </p>
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    Furthermore, cookies can be classified by their purpose. Essential cookies are fundamental for a website's basic operation, enabling features like secure login or shopping cart functionality. Without these, the site simply wouldn't work as intended. Performance or analytics cookies collect anonymous data on how visitors use a website, helping site owners understand user behavior and improve performance. Functional cookies remember user choices to provide personalized features, such as remembering your username or region. Lastly, advertising or targeting cookies track browsing habits to deliver more relevant advertisements. Each category serves a distinct role in the complex ecosystem of web functionality and online advertising, contributing to both the user's experience and the website's operational insights. Understanding these distinctions empowers users to make informed decisions about their cookie preferences and privacy settings.
+                </p>
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    It is also important to differentiate between first-party and third-party cookies. First-party cookies are set by the website you are visiting – in our case, YumCraz. They are generally used to store your preferences, remember your login status, or track your activity on our site for internal analytics. Third-party cookies, however, are set by a domain other than the one you are visiting. These are often used for cross-site tracking, advertising, and social media integration. For example, if a YumCraz page includes an embedded video from YouTube, YouTube might set its own cookies on your device. Similarly, if we use an external advertising service, that service might place a third-party cookie to track your interests across different websites. The distinction is crucial because third-party cookies are often the primary concern for privacy-conscious users due to their potential for extensive tracking across the internet. Managing these cookies effectively is key to controlling your online footprint.
+                </p>
+
+                <h2 class="text-3xl font-bold mb-6 text-electric-orange">2. How We Use Cookies at YumCraz</h2>
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    At YumCraz, we utilize cookies to enhance your "Food. Fun. Full-On Flavor." experience. Our use of cookies is designed to make our website more functional, efficient, and personalized for every flavor-obsessed foodie. We leverage these small data files to remember your preferences, understand how you interact with our content, and tailor our offerings to your specific tastes. For instance, if you frequently visit our "Craz Trending Recipes" section and spend a lot of time on spicy dishes, our cookies help us recognize this pattern. This allows us to recommend similar bold fusion bites or highlight new "Spice Craz Test" challenges that might pique your interest, ensuring your culinary journey with us is always exciting and relevant. Cookies are fundamental to delivering the dynamic and engaging experience that defines YumCraz, enabling us to continuously refine our platform to better serve your adventurous palate.
+                </p>
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    Our cookie usage extends across various aspects of the YumCraz platform:
+                </p>
+                <ul class="list-disc list-inside text-gray-700 leading-relaxed mb-6 pl-4">
+                    <li>**Essential Cookies:** These cookies are absolutely necessary for the website to function properly. They enable core functionalities like navigating the site, accessing secure areas, and using interactive features such as the "One-Tap Save" button for your favorite recipes. Without these cookies, certain services you request cannot be provided. For example, if you were to log into your YumCraz account, an essential cookie would remember your login status, preventing you from having to re-enter your credentials on every new page you visit. They are crucial for maintaining the basic operational integrity of our platform, ensuring a smooth and uninterrupted browsing experience as you explore our wild bites and big flavors. These cookies do not collect any personal information that could be used for marketing or tracking purposes.</li>
+                    <li>**Performance and Analytics Cookies:** These cookies collect information about how visitors use our website, such as which pages are visited most often, how much time is spent on each page, and if users encounter any error messages. This data is aggregated and anonymous, meaning it cannot be used to identify individual users. We use this information to understand user behavior, identify popular content (e.g., which "Global Flavor Explorer" countries are most popular), and improve the performance and design of our website. For example, if we notice a particular recipe page has a high bounce rate, analytics cookies help us identify potential issues and optimize the content or layout to enhance user engagement. This continuous analysis allows us to refine our offerings and ensure that YumCraz remains the go-to space for flavor-obsessed foodies.</li>
+                    <li>**Functionality Cookies:** These cookies allow our website to remember choices you make (such as your username, language, or region) and provide enhanced, more personalized features. For instance, if you've previously accepted our cookie policy, a functionality cookie will remember this preference so you don't see the banner on every subsequent visit. They can also be used to remember changes you have made to text size, fonts, and other customizable parts of web pages. These cookies help us deliver a more tailored experience, making your interaction with YumCraz more efficient and enjoyable by recalling your specific preferences and settings. They are designed to improve your user experience by making the website more convenient and responsive to your individual needs, ensuring that your journey through our flavor experiments is as seamless as possible.</li>
+                    <li>**Advertising and Targeting Cookies:** These cookies are used to deliver advertisements more relevant to you and your interests. They are also used to limit the number of times you see an advertisement and help measure the effectiveness of advertising campaigns. These cookies remember that you have visited our website and this information may be shared with other organizations, such as advertisers. This allows us to show you ads for YumCraz content that might genuinely interest you, based on your browsing habits (e.g., if you've been exploring "Hot Cheetos Burgers," you might see ads for other bold fusion bites). They help us ensure that our marketing efforts are efficient and that you receive relevant content, contributing to a more personalized advertising experience across the web. These cookies are typically placed by third-party advertising networks with our permission.</li>
+                    <li>**Social Media Cookies:** These cookies are set by social media services that we have added to the site to enable you to share our content with your friends and networks. They are capable of tracking your browser across other sites and building up a profile of your interests. This may impact the content and messages you see on other websites you visit. For example, if you use a "Share to Social" button on a YumCraz recipe page, the social media platform might set a cookie to track that interaction. These cookies are crucial for facilitating the "social-first" aspect of YumCraz, allowing seamless sharing of "viral-worthy food fun" and connecting our community across various platforms. They help us extend our reach and enable you to easily spread the word about your favorite flavor adventures.</li>
+                </ul>
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    The specific cookies used on YumCraz may change over time as we update our website and integrate new services. We strive to keep this policy updated to reflect our current cookie usage. Our goal is to use cookies in a way that enhances your experience while respecting your privacy. We continuously review our cookie practices to ensure they align with industry best practices and relevant data protection regulations. The data collected through cookies helps us to understand aggregate user behavior, allowing us to make informed decisions about content development, website features, and overall platform improvements. This commitment to data-driven enhancement ensures that YumCraz remains at the forefront of food entertainment, constantly evolving to meet the demands of adventurous eaters and home cooks who love trying wild new things.
+                </p>
+
+                <h2 class="text-3xl font-bold mb-6 text-electric-orange">3. Third-Party Cookies</h2>
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    In addition to our own cookies (first-party cookies), YumCraz also uses various third-party cookies to report usage statistics of the Service, deliver advertisements on and through the Service, and for other purposes. These third-party cookies are set by domains other than YumCraz and are often used by external service providers that we partner with to enhance our website's functionality or to support our marketing efforts. For example, we might use Google Analytics to understand website traffic patterns, which involves Google setting a cookie. Similarly, if we embed a video from YouTube or a social media feed from Instagram, those platforms may set their own cookies on your device. These cookies allow third parties to recognize your device when you visit our website and also when you visit certain other websites. This enables them to provide targeted advertising or to integrate social media features seamlessly into our site.
+                </p>
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    The types of third-party cookies we may use include:
+                </p>
+                <ul class="list-disc list-inside text-gray-700 leading-relaxed mb-6 pl-4">
+                    <li>**Analytics Providers:** Services like Google Analytics help us gather anonymous data on website usage, such as visitor numbers, popular pages, and traffic sources. This information is invaluable for understanding how our users interact with "Craz Trending Recipes" or "Global Flavor Explorer" and helps us optimize content and navigation. These cookies typically collect information in an aggregated form that does not directly identify any individual visitor. They allow us to see trends and patterns in user behavior, which in turn helps us make data-driven decisions to improve the overall user experience and the effectiveness of our content delivery.</li>
+                    <li>**Advertising Partners:** We may partner with third-party advertising networks to display relevant ads to you on our website and across the internet. These partners use cookies to collect information about your browsing activities on YumCraz and other sites, allowing them to build a profile of your interests and deliver personalized advertisements. This means if you're frequently engaging with "Wild Food Challenges," you might see ads for related culinary products or events. These cookies are crucial for supporting our free content by making our advertising efforts more efficient and targeted. They help us reach the right audience with the right message, ensuring that our "Full-On Flavor" brand resonates with adventurous eaters.</li>
+                    <li>**Social Media Platforms:** When we integrate social media features (like "Share to Social" buttons or embedded feeds) from platforms such as Instagram, TikTok, Facebook, or YouTube, these platforms may set their own cookies. These cookies enable the social media features to function correctly and may also track your activity across different websites to build a profile of your interests for advertising or content recommendations on their platforms. For example, if you watch a "Fast Yum Reel" embedded from YouTube, YouTube might set a cookie to remember your viewing preferences. These cookies are essential for fostering the social and interactive nature of YumCraz, allowing seamless content sharing and community engagement.</li>
+                    <li>**Content Delivery Networks (CDNs):** While not strictly for tracking, CDNs may use cookies to optimize content delivery by remembering your location or network conditions. This ensures that our "Over-the-top recipes" and high-energy food videos load quickly and efficiently, regardless of where you are in the world. These cookies are primarily for performance enhancement and do not typically track personal information. They contribute to a smoother, faster browsing experience, which is vital for a visually rich and dynamic platform like YumCraz.</li>
+                    <li>**Security Services:** Some third-party security services we use may deploy cookies to help identify and prevent malicious activities, such as bot attacks or unauthorized access attempts. These cookies are crucial for maintaining the security and integrity of our website and protecting user data. They operate in the background to safeguard your experience and ensure that YumCraz remains a safe and reliable platform for all users. These are typically essential for the security infrastructure of the site.</li>
+                </ul>
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    YumCraz has no access to or control over these cookies that are used by third-party advertisers. We encourage you to consult the respective privacy policies of these third-party ad servers for more detailed information on their practices as well as for instructions about how to opt-out of certain practices. Your interaction with these third-party services is governed by their respective privacy and cookie policies, not by YumCraz's. We strive to partner only with reputable third parties who adhere to high standards of data privacy and security. However, it is your responsibility to review their policies and manage your preferences directly with them if you have concerns about their tracking practices. We provide links to their policies where possible to facilitate your informed decision-making.
+                </p>
+
+                <h2 class="text-3xl font-bold mb-6 text-electric-orange">4. Your Choices Regarding Cookies</h2>
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    You have the right to decide whether to accept or reject cookies. You can exercise your cookie preferences by setting your browser preferences, or by using the cookie consent tool provided on our website. Most web browsers automatically accept cookies, but you can usually modify your browser setting to decline cookies if you prefer. However, please be aware that disabling cookies may affect the functionality of this and many other websites that you visit. It may result in the disabling of certain features and functionalities of the YumCraz website. For example, if you decline functional cookies, your "One-Tap Save" preferences might not be remembered, or your personalized content recommendations might be less accurate. We believe in empowering our users to make informed decisions about their privacy, and we provide various tools to help you manage your cookie settings effectively.
+                </p>
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    Here are several ways you can manage your cookie preferences:
+                </p>
+                <ul class="list-disc list-inside text-gray-700 leading-relaxed mb-6 pl-4">
+                    <li>**Browser Settings:** You can typically find cookie settings in your browser's "Options" or "Preferences" menu. Each browser handles cookie management slightly differently.
+                        <ul class="list-circle list-inside ml-4">
+                            <li>**Google Chrome:** Go to Settings > Privacy and security > Site Settings > Cookies and site data. Here you can block third-party cookies, clear cookies, and manage specific site permissions.</li>
+                            <li>**Mozilla Firefox:** Go to Options > Privacy & Security > Cookies and Site Data. You can choose to block all cookies, block third-party cookies, or clear data when Firefox closes.</li>
+                            <li>**Microsoft Edge:** Go to Settings > Privacy, search, and services > Clear browsing data or Cookies and site permissions. You can manage cookies, block third-party cookies, and set specific site permissions.</li>
+                            <li>**Safari (macOS/iOS):** Go to Preferences > Privacy. You can block all cookies, prevent cross-site tracking, and manage website data.</li>
+                            <li>**Other Browsers:** Consult your browser's help documentation for instructions on managing cookie settings.</li>
+                        </ul>
+                        Please remember that if you delete your cookies, you may need to re-enter your login details or preferences on websites you visit, including YumCraz.</li>
+                    <li>**Cookie Consent Tool (on YumCraz):** We provide a dedicated cookie consent dialogue box at the bottom of our website. This tool allows you to accept or decline our use of non-essential cookies. Your preference will be stored, and you can change your mind at any time by revisiting this Cookie Policy page or clearing your browser's cookies. This tool is designed to give you granular control over the types of cookies we use, allowing you to tailor your experience to your privacy comfort level while still enjoying the core functionalities of YumCraz.</li>
+                    <li>**Opt-out of Advertising Networks:** Many advertising networks offer you the option to opt out of targeted advertising. You can visit websites like the Network Advertising Initiative (<a href="https://www.networkadvertising.org" class="text-electric-orange hover:underline" target="_blank">www.networkadvertising.org</a>) or the Digital Advertising Alliance (<a href="https://www.aboutads.info" class="text-electric-orange hover:underline" target="_blank">www.aboutads.info</a>) to learn more about how to opt out of interest-based advertising from participating companies. Opting out of an ad network does not mean you will no longer receive advertising; it means that the advertising you see will not be targeted based on your web browsing activities.</li>
+                    <li>**Mobile Device Settings:** For mobile applications, your device settings may offer options to limit ad tracking or reset advertising identifiers. Consult your device manufacturer's instructions for details.</li>
+                </ul>
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    It's important to understand that while you can manage your cookie preferences, disabling certain types of cookies (especially essential cookies) may impact the functionality and performance of the YumCraz website. We strive to provide a balance between a rich, personalized user experience and respecting your privacy choices. Your ability to control cookies is a fundamental aspect of online privacy, and we encourage you to explore these options to ensure your browsing experience aligns with your preferences. Remember, your choices matter, and we are here to support you in navigating the world of digital privacy.
+                </p>
+
+                <h2 class="text-3xl font-bold mb-6 text-electric-orange">5. Changes to Our Cookie Policy</h2>
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    We may update our Cookie Policy from time to time to reflect changes in our practices, technology, legal requirements, or for other operational, legal, or regulatory reasons. We will notify you of any changes by posting the new Cookie Policy on this page. We will also update the "Last Updated" date at the top of this Cookie Policy. For material changes, we will endeavor to provide you with more prominent notice, such as through email (if you have provided us with your email address) or a prominent notice on our Service prior to the change becoming effective. You are advised to review this Cookie Policy periodically for any changes. Changes to this Cookie Policy are effective when they are posted on this page. Your continued use of the Website after any such changes constitutes your acceptance of the updated policy. We are committed to keeping you informed about how we use cookies and ensuring that our policy remains transparent and up-to-date with evolving privacy standards.
+                </p>
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    Our commitment to transparency means that we will always strive to clearly communicate any modifications to our cookie practices. This includes not only changes to the types of cookies we use but also any shifts in how we utilize the data collected through them. As the digital landscape evolves, so too do the tools and regulations surrounding online privacy. YumCraz is dedicated to staying abreast of these developments to ensure our Cookie Policy remains compliant and reflective of best practices. We understand that trust is built on clear communication, and we aim to provide you with all the necessary information to make informed decisions about your data. We encourage you to bookmark this page and check it regularly for any updates, ensuring you are always aware of how your flavor adventure on YumCraz is supported by cookie technology.
+                </p>
+
+                <h2 class="text-3xl font-bold mb-6 text-electric-orange">6. Contact Us Regarding Cookies and Privacy</h2>
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    Your privacy and control over your data are paramount to YumCraz. If you have any questions, concerns, or requests regarding our Cookie Policy, your cookie preferences, or any other aspect of your privacy on our website, please do not hesitate to reach out. We are committed to providing clear answers and assisting you in managing your data. Below, you will find detailed contact points for various types of inquiries related to cookies and privacy. We encourage you to use the most relevant contact method to ensure your query is directed to the appropriate team member for the fastest and most accurate response. Your feedback helps us maintain the highest standards of data protection and user satisfaction.
+                </p>
+
+                <div class="space-y-8">
+                    <!-- Contact Point 1 -->
+                    <div>
+                        <h3 class="text-2xl font-bold mb-2 text-black-pepper-charcoal">1. General Cookie Policy Clarification</h3>
+                        <p class="text-gray-700 leading-relaxed">
+                            If you need a general explanation of any section within this Cookie Policy, or if you find any terminology unclear, please contact us. We aim to make our policies as accessible as possible, and your questions help us identify areas for improvement in clarity and conciseness. Provide the specific section or term you need clarified.
+                            We understand that legal and technical language can sometimes be complex, and we are here to bridge that gap. Our goal is to ensure that every user, regardless of their technical background, can fully comprehend how we use cookies and what their rights are. Your inquiries are valuable in helping us achieve this level of transparency.
+                            Please feel free to send an email to our dedicated privacy team, outlining your specific questions. We will endeavor to provide a detailed and easy-to-understand response within a reasonable timeframe. Your understanding is crucial to our commitment to privacy.
+                        </p>
+                    </div>
+                    <!-- Contact Point 2 -->
+                    <div>
+                        <h3 class="text-2xl font-bold mb-2 text-black-pepper-charcoal">2. Opting Out of Specific Cookie Categories</h3>
+                        <p class="text-gray-700 leading-relaxed">
+                            If you wish to opt out of specific cookie categories (e.g., analytics, advertising) beyond what your browser offers, or if you are having trouble using our on-site consent tool, please let us know.
+                            Describe the specific types of cookies you wish to decline and any issues you've encountered with existing tools. We can guide you through the process or manually adjust settings where possible.
+                            We are committed to honoring your preferences and ensuring that you have granular control over your data. Your ability to choose is a cornerstone of our privacy philosophy.
+                            Please note that opting out of certain cookies might affect the personalized features of YumCraz.
+                        </p>
+                    </div>
+                    <!-- Contact Point 3 -->
+                    <div>
+                        <h3 class="text-2xl font-bold mb-2 text-black-pepper-charcoal">3. Requesting Personal Data Related to Cookies</h3>
+                        <p class="text-gray-700 leading-relaxed">
+                            If you believe certain cookies on our site collect personal data about you and you wish to exercise your right to access this data, please submit a formal request.
+                            Include your name, email address associated with your YumCraz account (if applicable), and a clear description of the data you are seeking.
+                            We will verify your identity to ensure the security of your information before processing your request.
+                            This process aligns with global data protection regulations to give you full transparency.
+                        </p>
+                    </div>
+                    <!-- Contact Point 4 -->
+                    <div>
+                        <h3 class="text-2xl font-bold mb-2 text-black-pepper-charcoal">4. Requesting Deletion of Cookie-Related Data</h3>
+                        <p class="text-gray-700 leading-relaxed">
+                            If you wish for any personal data collected via cookies to be erased from our systems, you can submit a deletion request.
+                            Specify the data you wish to have deleted and the reason for your request (e.g., "right to be forgotten").
+                            We will comply with all legal obligations regarding data erasure, verifying your identity as part of the process.
+                            This ensures your data is handled securely and in accordance with your wishes.
+                        </p>
+                    </div>
+                    <!-- Contact Point 5 -->
+                    <div>
+                        <h3 class="text-2xl font-bold mb-2 text-black-pepper-charcoal">5. Reporting a Cookie-Related Security Concern</h3>
+                        <p class="text-gray-700 leading-relaxed">
+                            If you suspect any security vulnerability related to our cookies, or if you believe your cookie data has been compromised, please report it immediately.
+                            Provide as much detail as possible about the nature of the concern, including steps to reproduce it if applicable.
+                            Your vigilance helps us maintain a secure environment for all users. We treat security reports with the highest priority.
+                            We appreciate your assistance in safeguarding our platform.
+                        </p>
+                    </div>
+                    <!-- Contact Point 6 -->
+                    <div>
+                        <h3 class="text-2xl font-bold mb-2 text-black-pepper-charcoal">6. Inquiring About Third-Party Cookie Partners</h3>
+                        <p class="text-gray-700 leading-relaxed">
+                            For detailed information about specific third-party cookie providers we partner with, their data practices, or how to manage their cookies directly, send us an inquiry.
+                            Specify the third-party service you are interested in (e.g., Google Analytics, Facebook, a particular ad network).
+                            We can provide links to their respective privacy and cookie policies to help you understand their practices.
+                            While we don't control their policies, we can guide you to their resources.
+                        </p>
+                    </div>
+                    <!-- Contact Point 7 -->
+                    <div>
+                        <h3 class="text-2xl font-bold mb-2 text-black-pepper-charcoal">7. Issues with Cookie Consent Banner Functionality</h3>
+                        <p class="text-gray-700 leading-relaxed">
+                            If our cookie consent banner is not appearing, not responding, or behaving unexpectedly, please report the issue.
+                            Include details about your browser, device, and any error messages you might be seeing.
+                            This helps our technical team diagnose and fix any bugs quickly, ensuring a smooth user experience for everyone.
+                            Your reports are vital for maintaining site integrity.
+                        </p>
+                    </div>
+                    <!-- Contact Point 8 -->
+                    <div>
+                        <h3 class="text-2xl font-bold mb-2 text-black-pepper-charcoal">8. Questions About Cookie Data Retention Periods</h3>
+                        <p class="text-gray-700 leading-relaxed">
+                            If you have questions about how long specific types of cookies or the data collected by them are retained, please contact us.
+                            We can provide information on the typical lifespan of different cookie categories used on YumCraz.
+                            Understanding data retention helps you manage your privacy expectations.
+                            We adhere to data minimization principles.
+                        </p>
+                    </div>
+                    <!-- Contact Point 9 -->
+                    <div>
+                        <h3 class="text-2xl font-bold mb-2 text-black-pepper-charcoal">9. Requesting Restriction of Cookie Data Processing</h3>
+                        <p class="text-gray-700 leading-relaxed">
+                            Under certain data protection laws, you have the right to request that we restrict the processing of your personal data collected via cookies.
+                            Explain the basis for your request (e.g., you contest the accuracy of the data, or the processing is unlawful).
+                            We will review your request in accordance with applicable regulations.
+                            This provides you with another layer of control over your information.
+                        </p>
+                    </div>
+                    <!-- Contact Point 10 -->
+                    <div>
+                        <h3 class="text-2xl font-bold mb-2 text-black-pepper-charcoal">10. Objecting to Cookie Data Processing for Marketing</h3>
+                        <p class="text-gray-700 leading-relaxed">
+                            If you wish to object to the processing of your cookie-related data for direct marketing purposes, please inform us.
+                            We will ensure your preferences are updated promptly to cease such processing.
+                            Your right to opt out of marketing communications is fully respected.
+                            We prioritize user consent in all our marketing efforts.
+                        </p>
+                    </div>
+                    <!-- Contact Point 11 -->
+                    <div>
+                        <h3 class="text-2xl font-bold mb-2 text-black-pepper-charcoal">11. Inquiring About Cookie-Related Data Transfers</h3>
+                        <p class="text-gray-700 leading-relaxed">
+                            If you have questions about whether your cookie-related data is transferred internationally or to specific third parties, please reach out.
+                            We can clarify our data transfer mechanisms and safeguards in place.
+                            Understanding data flow is key to comprehensive privacy.
+                            We ensure compliance with all data transfer regulations.
+                        </p>
+                    </div>
+                    <!-- Contact Point 12 -->
+                    <div>
+                        <h3 class="text-2xl font-bold mb-2 text-black-pepper-charcoal">12. Requesting Information on Cookie Audits</h3>
+                        <p class="text-gray-700 leading-relaxed">
+                            If you are interested in our internal processes for auditing and reviewing our cookie usage, you may submit an inquiry.
+                            While we cannot disclose proprietary security details, we can provide general information about our commitment to regular audits.
+                            This demonstrates our dedication to continuous improvement in privacy practices.
+                            We constantly monitor our cookie landscape.
+                        </p>
+                    </div>
+                    <!-- Contact Point 13 -->
+                    <div>
+                        <h3 class="text-2xl font-bold mb-2 text-black-pepper-charcoal">13. Feedback on Cookie Policy Readability</h3>
+                        <p class="text-gray-700 leading-relaxed">
+                            We welcome your feedback on the clarity, comprehensiveness, and readability of this Cookie Policy.
+                            If you have suggestions on how we can make it more user-friendly or understandable, please share your thoughts.
+                            Your input helps us improve our communication and transparency.
+                            We strive for clear and concise legal documents.
+                        </p>
+                    </div>
+                    <!-- Contact Point 14 -->
+                    <div>
+                        <h3 class="text-2xl font-bold mb-2 text-black-pepper-charcoal">14. Reporting Suspected Cookie Policy Violations</h3>
+                        <p class="text-gray-700 leading-relaxed">
+                            If you believe YumCraz or a third-party service operating on our site is violating this Cookie Policy, please report your concerns.
+                            Provide specific examples and evidence to help us investigate thoroughly.
+                            We take all reports seriously and will investigate promptly.
+                            Upholding our policy is paramount.
+                        </p>
+                    </div>
+                    <!-- Contact Point 15 -->
+                    <div>
+                        <h3 class="text-2xl font-bold mb-2 text-black-pepper-charcoal">15. Questions About Cookie-Based Personalization</h3>
+                        <p class="text-gray-700 leading-relaxed">
+                            If you have questions about how cookies contribute to personalized content or recommendations on YumCraz, feel free to ask.
+                            We can explain the algorithms and data points used to tailor your flavor adventure.
+                            Understanding personalization helps you appreciate the value of cookies.
+                            We aim for relevant and exciting content delivery.
+                        </p>
+                    </div>
+                    <!-- Contact Point 16 -->
+                    <div>
+                        <h3 class="text-2xl font-bold mb-2 text-black-pepper-charcoal">16. Inquiring About Cookie Consent Records</h3>
+                        <p class="text-gray-700 leading-relaxed">
+                            If you wish to know how your cookie consent (or refusal) is recorded and maintained, please submit an inquiry.
+                            We can explain our consent management system and data logging practices.
+                            Transparency in consent records is a key privacy principle.
+                            We ensure robust record-keeping for compliance.
+                        </p>
+                    </div>
+                    <!-- Contact Point 17 -->
+                    <div>
+                        <h3 class="text-2xl font-bold mb-2 text-black-pepper-charcoal">17. Technical Issues with Cookie Deletion</h3>
+                        <p class="text-gray-700 leading-relaxed">
+                            If you are experiencing technical difficulties deleting cookies through your browser settings, we can offer guidance.
+                            Provide details about your browser version and the steps you've attempted.
+                            While we don't control browser functionality, we can offer general troubleshooting tips.
+                            Empowering users with control is our goal.
+                        </p>
+                    </div>
+                    <!-- Contact Point 18 -->
+                    <div>
+                        <h3 class="text-2xl font-bold mb-2 text-black-pepper-charcoal">18. Questions About Cookie-Related Analytics Data</h3>
+                        <p class="text-gray-700 leading-relaxed">
+                            If you have specific questions about the anonymous analytics data collected via cookies, such as metrics or reporting methods, please ask.
+                            We can provide insights into how we use this aggregated data to improve our website.
+                            Understanding our analytics helps you see the value of performance cookies.
+                            Data-driven decisions enhance your experience.
+                        </p>
+                    </div>
+                    <!-- Contact Point 19 -->
+                    <div>
+                        <h3 class="text-2xl font-bold mb-2 text-black-pepper-charcoal">19. Inquiring About Cookie-Based A/B Testing</h3>
+                        <p class="text-gray-700 leading-relaxed">
+                            If you're curious about how cookies are used in our A/B testing or experimentation to optimize the website, we can provide general information.
+                            A/B testing helps us refine features like the "Flavor Craze Meter" for better user engagement.
+                            This process is designed to enhance the user experience without compromising privacy.
+                            We continuously optimize for the best flavor adventure.
+                        </p>
+                    </div>
+                    <!-- Contact Point 20 -->
+                    <div>
+                        <h3 class="text-2xl font-bold mb-2 text-black-pepper-charcoal">20. Request for Cookie Policy in Different Languages</h3>
+                        <p class="text-gray-700 leading-relaxed">
+                            If you require this Cookie Policy in a language other than English, please let us know your preferred language.
+                            While we currently provide content primarily in English, we are always evaluating opportunities for broader accessibility.
+                            Your request helps us prioritize future localization efforts.
+                            We aim for global accessibility for our flavor fanatics.
+                        </p>
+                    </div>
+                    <!-- Contact Point 21 -->
+                    <div>
+                        <h3 class="text-2xl font-bold mb-2 text-black-pepper-charcoal">21. Questions on Cookie Consent Revocation Process</h3>
+                        <p class="text-gray-700 leading-relaxed">
+                            If you need detailed steps on how to revoke your cookie consent after initially accepting it, please contact us.
+                            We can guide you through the process, which typically involves clearing browser cookies or using our consent tool.
+                            Ensuring easy revocation is key to user control.
+                            Your choices are always respected and actionable.
+                        </p>
+                    </div>
+                    <!-- Contact Point 22 -->
+                    <div>
+                        <h3 class="text-2xl font-bold mb-2 text-black-pepper-charcoal">22. Inquiry About Cookie-Related Data Minimization</h3>
+                        <p class="text-gray-700 leading-relaxed">
+                            If you have questions about our data minimization practices concerning cookie data, feel free to ask.
+                            We can explain how we strive to collect only the necessary data for stated purposes.
+                            Data minimization is a core principle of our privacy approach.
+                            We are committed to responsible data handling.
+                        </p>
+                    </div>
+                    <!-- Contact Point 23 -->
+                    <div>
+                        <h3 class="text-2xl font-bold mb-2 text-black-pepper-charcoal">23. Reporting Cookie-Related Misinformation</h3>
+                        <p class="text-gray-700 leading-relaxed">
+                            If you encounter any misinformation about YumCraz's cookie practices on third-party sites or social media, please bring it to our attention.
+                            Provide links or screenshots of the misinformation so we can address it appropriately.
+                            Correcting inaccuracies is important for maintaining trust and transparency.
+                            We value your help in upholding our reputation.
+                        </p>
+                    </div>
+                    <!-- Contact Point 24 -->
+                    <div>
+                        <h3 class="text-2xl font-bold mb-2 text-black-pepper-charcoal">24. Questions About Cookie-Based Session Management</h3>
+                        <p class="text-gray-700 leading-relaxed">
+                            If you're curious about how session cookies are used to manage your login state or shopping cart (if applicable), please inquire.
+                            We can explain the technical aspects of how these temporary cookies enhance your browsing flow.
+                            Understanding session management highlights the functional necessity of certain cookies.
+                            Seamless navigation is a priority for us.
+                        </p>
+                    </div>
+                    <!-- Contact Point 25 -->
+                    <div>
+                        <h3 class="text-2xl font-bold mb-2 text-black-pepper-charcoal">25. Inquiring About Cookie-Based Fraud Prevention</h3>
+                        <p class="text-gray-700 leading-relaxed">
+                            If you have questions about how certain cookies might be used for fraud detection or security purposes on our site, please ask.
+                            We can provide general information about our security measures without revealing sensitive details.
+                            Cookie-based security helps protect both our platform and your data.
+                            Your safety is a core concern for YumCraz.
+                        </p>
+                    </div>
+                    <!-- Contact Point 26 -->
+                    <div>
+                        <h3 class="text-2xl font-bold mb-2 text-black-pepper-charcoal">26. Feedback on Cookie Policy Updates</h3>
+                        <p class="text-gray-700 leading-relaxed">
+                            We welcome your feedback on any updates or changes made to this Cookie Policy.
+                            If you have thoughts on how new additions or revisions impact your understanding, please share them.
+                            Your input is crucial for continuous improvement of our transparency.
+                            We value your engagement in our policy evolution.
+                        </p>
+                    </div>
+                    <!-- Contact Point 27 -->
+                    <div>
+                        <h3 class="text-2xl font-bold mb-2 text-black-pepper-charcoal">27. Questions About Cookie-Based User Preferences</h3>
+                        <p class="text-gray-700 leading-relaxed">
+                            If you're wondering how cookies remember your specific preferences (e.g., dark mode, preferred content categories), please inquire.
+                            We can explain how functional cookies store these settings to enhance your personalized experience.
+                            Personalization is key to a truly "Full-On Flavor" journey.
+                            We aim to make your site experience uniquely yours.
+                        </p>
+                    </div>
+                    <!-- Contact Point 28 -->
+                    <div>
+                        <h3 class="text-2xl font-bold mb-2 text-black-pepper-charcoal">28. Inquiring About Cookie Consent for New Features</h3>
+                        <p class="text-gray-700 leading-relaxed">
+                            If YumCraz introduces new features that utilize cookies, and you have questions about the associated consent, please contact us.
+                            We are committed to providing clear consent mechanisms for any new data processing activities.
+                            Transparency around new features is paramount for user trust.
+                            We will always seek your informed consent.
+                        </p>
+                    </div>
+                    <!-- Contact Point 29 -->
+                    <div>
+                        <h3 class="text-2xl font-bold mb-2 text-black-pepper-charcoal">29. Reporting Issues with Cookie-Based Content Display</h3>
+                        <p class="text-gray-700 leading-relaxed">
+                            If you notice issues with content display that seem related to your cookie settings (e.g., missing elements after declining cookies), please report them.
+                            Provide details about the specific content affected and your current cookie preferences.
+                            This helps us troubleshoot compatibility issues and improve our website's resilience.
+                            We strive for seamless content delivery regardless of settings.
+                        </p>
+                    </div>
+                    <!-- Contact Point 30 -->
+                    <div>
+                        <h3 class="text-2xl font-bold mb-2 text-black-pepper-charcoal">30. Questions About Cookie-Based A/B Testing Opt-Out</h3>
+                        <p class="text-gray-700 leading-relaxed">
+                            If you wish to opt out of A/B testing that uses cookies for tracking, please inquire about the process.
+                            We can guide you on how to manage your participation in such experiments.
+                            Your control over your experience extends to testing methodologies.
+                            We respect your choice in all aspects of site interaction.
+                        </p>
+                    </div>
+                    <!-- Contact Point 31 -->
+                    <div>
+                        <h3 class="text-2xl font-bold mb-2 text-black-pepper-charcoal">31. Inquiring About Cookie-Based Affiliate Tracking</h3>
+                        <p class="text-gray-700 leading-relaxed">
+                            If you have questions about how cookies are used for affiliate tracking on YumCraz, please contact us.
+                            We can explain the general mechanisms of how these cookies attribute referrals without sharing personal details.
+                            Understanding affiliate tracking helps clarify revenue generation models.
+                            Transparency in partnerships is important to us.
+                        </p>
+                    </div>
+                    <!-- Contact Point 32 -->
+                    <div>
+                        <h3 class="text-2xl font-bold mb-2 text-black-pepper-charcoal">32. Requesting Information on Cookie-Based Cross-Device Tracking</h3>
+                        <p class="text-gray-700 leading-relaxed">
+                            If you are concerned about or wish to understand cross-device tracking via cookies, please submit an inquiry.
+                            We can explain whether and how YumCraz or its partners might use cookies to link your activity across multiple devices.
+                            Understanding this helps you manage your digital footprint across your devices.
+                            We prioritize user awareness of tracking practices.
+                        </p>
+                    </div>
+                    <!-- Contact Point 33 -->
+                    <div>
+                        <h3 class="text-2xl font-bold mb-2 text-black-pepper-charcoal">33. Questions About Cookie-Based Retargeting Campaigns</h3>
+                        <p class="text-gray-700 leading-relaxed">
+                            If you are seeing retargeting ads related to YumCraz and have questions about the cookie-based mechanisms, please ask.
+                            We can explain how advertising cookies enable us to show you relevant content after you've visited our site.
+                            Understanding retargeting helps demystify online advertising.
+                            We aim for relevant and non-intrusive advertising.
+                        </p>
+                    </div>
+                    <!-- Contact Point 34 -->
+                    <div>
+                        <h3 class="text-2xl font-bold mb-2 text-black-pepper-charcoal">34. Inquiring About Cookie-Based Audience Segmentation</h3>
+                        <p class="text-gray-700 leading-relaxed">
+                            If you're curious about how cookies contribute to audience segmentation for content delivery or marketing, please inquire.
+                            We can explain how aggregated cookie data helps us understand different user groups and their interests.
+                            Audience segmentation allows us to tailor content more effectively.
+                            We strive to deliver content that resonates with you.
+                        </p>
+                    </div>
+                    <!-- Contact Point 35 -->
+                    <div>
+                        <h3 class="text-2xl font-bold mb-2 text-black-pepper-charcoal">35. Reporting Issues with Cookie-Based Login Persistence</h3>
+                        <p class="text-gray-700 leading-relaxed">
+                            If you are experiencing issues with staying logged into your YumCraz account, and suspect it's cookie-related, please report it.
+                            Provide details about how often you are logged out and any error messages.
+                            This helps us troubleshoot functionality issues with essential login cookies.
+                            We aim for a seamless login experience for our users.
+                        </p>
+                    </div>
+                    <!-- Contact Point 36 -->
+                    <div>
+                        <h3 class="text-2xl font-bold mb-2 text-black-pepper-charcoal">36. Questions About Cookie-Based Regional Content Delivery</h3>
+                        <p class="text-gray-700 leading-relaxed">
+                            If you have questions about how cookies might be used to deliver content specific to your region (e.g., "Global Flavor Explorer" features), please ask.
+                            We can explain how certain cookies help detect your geographical preferences for localized experiences.
+                            Regional content delivery enhances the relevance of your flavor adventure.
+                            We strive to bring global tastes directly to you.
+                        </p>
+                    </div>
+                    <!-- Contact Point 37 -->
+                    <div>
+                        <h3 class="text-2xl font-bold mb-2 text-black-pepper-charcoal">37. Inquiring About Cookie-Based User Tracking for Site Improvement</h3>
+                        <p class="text-gray-700 leading-relaxed">
+                            If you're curious about how non-personal cookie data is used to track user journeys on our site for improvement purposes, please inquire.
+                            We can explain how this aggregated data helps us optimize navigation and content flow.
+                            Understanding user flow is vital for continuous website enhancement.
+                            We are always looking for ways to improve your experience.
+                        </p>
+                    </div>
+                    <!-- Contact Point 38 -->
+                    <div>
+                        <h3 class="text-2xl font-bold mb-2 text-black-pepper-charcoal">38. Request for Information on Cookie-Related Data Anonymization</h3>
+                        <p class="text-gray-700 leading-relaxed">
+                            If you have questions about our processes for anonymizing cookie-related data, please contact us.
+                            We can explain the techniques we use to ensure that aggregated data cannot be traced back to individuals.
+                            Data anonymization is a key step in protecting user privacy.
+                            We are committed to responsible data practices.
+                        </p>
+                    </div>
+                    <!-- Contact Point 39 -->
+                    <div>
+                        <h3 class="text-2xl font-bold mb-2 text-black-pepper-charcoal">39. Reporting Issues with Cookie-Based Video Playback</h3>
+                        <p class="text-gray-700 leading-relaxed">
+                            If you are experiencing problems with video playback on YumCraz that seem related to cookies (e.g., embedded "Fast Yum Reels" not loading), please report the issue.
+                            Provide details about the specific video, your browser, and any error messages.
+                            This helps us troubleshoot third-party cookie integration for multimedia content.
+                            We aim for seamless video experiences for our users.
+                        </p>
+                    </div>
+                    <!-- Contact Point 40 -->
+                    <div>
+                        <h3 class="text-2xl font-bold mb-2 text-black-pepper-charcoal">40. General Feedback on YumCraz's Privacy Practices</h3>
+                        <p class="text-gray-700 leading-relaxed">
+                            Beyond cookies, if you have any general feedback or suggestions regarding YumCraz's overall privacy practices, we welcome your input.
+                            Your comprehensive feedback helps us continuously improve our commitment to user privacy across all aspects of our platform.
+                            We believe in an open dialogue about privacy and data protection.
+                            Your trust is our most valuable ingredient.
+                        </p>
+                    </div>
+                </div>
+
+                <p class="text-gray-700 leading-relaxed mt-8">
+                    To ensure your inquiry is handled efficiently, please use the contact form on our <a href="contact.html" class="text-electric-orange hover:underline">Contact Us</a> page, or send an email directly to <a href="mailto:privacy@yumcraz.com" class="text-electric-orange hover:underline">privacy@yumcraz.com</a> for privacy-specific concerns. Please include your name, email address, and a detailed description of your question or request. We aim to respond to all inquiries within 2-3 business days. Your patience is appreciated as we ensure a thorough and accurate response. We are dedicated to maintaining open lines of communication with our community of flavor fanatics.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-black-pepper-charcoal text-creamy-white py-16 px-4">
+        <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 text-center md:text-left">
+            <!-- Disclaimer -->
+            <div>
+                <h3 class="text-2xl font-bold mb-6 text-electric-orange">Disclaimer</h3>
+                <div class="text-gray-400 text-sm leading-relaxed text-content-scroll max-h-64">
+                    <p>Welcome to YumCraz, your ultimate destination for bold, fun, and flavor-packed culinary adventures! Please be advised that the content provided on this website, including recipes, food hacks, challenge ideas, and dietary information, is intended for informational and entertainment purposes only. While we strive to offer accurate and engaging content, YumCraz does not guarantee the completeness, reliability, or accuracy of any information presented herein. Culinary results may vary depending on individual skill, ingredient quality, equipment used, and adherence to instructions. We strongly recommend exercising caution and common sense when attempting any recipes or food challenges, especially those involving heat, sharp objects, or potentially allergenic ingredients.</p>
+                    <p>YumCraz is not responsible for any adverse reactions, injuries, or damages that may result from following the recipes or participating in the challenges outlined on this site. If you have any dietary restrictions, allergies, or health concerns, please consult with a qualified healthcare professional or registered dietitian before making any changes to your diet or attempting new recipes. Nutritional information, where provided, is an estimate and should not be considered a substitute for professional dietary advice. We encourage users to be mindful of their own health and safety, and to prioritize responsible cooking practices.</p>
+                    <p>Participation in "Wild Food Challenges" is entirely at your own risk. YumCraz does not endorse or encourage unsafe practices. Users submitting content for challenges are solely responsible for the safety and legality of their submissions. We reserve the right to remove any content deemed inappropriate, unsafe, or in violation of our terms of service. The "Flavor Craze Meter" is a subjective rating system designed for entertainment and general guidance on the intensity of flavors (spicy, cheesy, etc.) and should not be taken as a precise measurement or a guarantee of personal tolerance. Individual taste preferences and sensitivities vary widely.</p>
+                    <p>All content, including text, images, videos, and graphics, is the property of YumCraz or its content creators and is protected by copyright and intellectual property laws. Unauthorized reproduction or distribution of any content from this site is strictly prohibited. By accessing and using the YumCraz website, you agree to these terms and conditions. We may update this disclaimer periodically, and your continued use of the site signifies your acceptance of any changes. Thank you for being a part of the YumCraz community – let's go crazy for taste responsibly!</p>
+                    <p>Furthermore, YumCraz may feature links to external websites or third-party products and services. These links are provided for your convenience and do not imply endorsement or responsibility for the content, accuracy, or practices of these external sites. We encourage you to review the privacy policies and terms of service of any third-party websites you visit. Any reliance you place on such information is therefore strictly at your own risk. We make every effort to keep the website up and running smoothly. However, YumCraz takes no responsibility for, and will not be liable for, the website being temporarily unavailable due to technical issues beyond our control. The views and opinions expressed by individual "Craz Creator Spotlights" or user-generated content do not necessarily reflect the official policy or position of YumCraz. We aim to foster a diverse and creative community, but content creators are responsible for their own submissions.</p>
+                    <p>It is important to remember that cooking and food preparation involve inherent risks. Always use appropriate safety measures, such as proper knife handling, safe cooking temperatures, and avoiding cross-contamination. Children should only engage in cooking activities under strict adult supervision. The "viral-worthy food fun" aspect of YumCraz is designed to inspire creativity and enjoyment, but always prioritize safety and well-being. We are passionate about food and fun, and we want your experience with YumCraz to be positive and safe. If you have any questions or concerns regarding the content or safety of our site, please do not hesitate to contact us through the provided contact information. Your feedback is valuable as we continuously strive to improve our platform and ensure a delightful experience for all our flavor-obsessed foodies.</p>
+                </div>
+            </div>
+
+            <!-- Customer Satisfaction -->
+            <div>
+                <h3 class="text-2xl font-bold mb-6 text-punchy-pink">Customer Satisfaction</h3>
+                <p class="text-gray-400 leading-relaxed mb-4">
+                    At YumCraz, your satisfaction is our top priority! We are dedicated to providing you with the most exciting, delicious, and engaging food content. We constantly strive to improve our recipes, challenges, and overall user experience.
+                </p>
+                <p class="text-gray-400 leading-relaxed">
+                    We value your feedback immensely. If you have any suggestions, comments, or encounter any issues, please don't hesitate to reach out to our support team. Your input helps us make YumCraz even better for our community of flavor adventurers. Join our social channels to share your thoughts and connect with fellow foodies!
+                </p>
+                <div class="flex justify-center md:justify-start gap-4 mt-6">
+                    <a href="#" class="text-creamy-white hover:text-electric-orange transition-colors duration-300 text-3xl"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-creamy-white hover:text-electric-orange transition-colors duration-300 text-3xl"><i class="fab fa-tiktok"></i></a>
+                    <a href="#" class="text-creamy-white hover:text-electric-orange transition-colors duration-300 text-3xl"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="text-creamy-white hover:text-electric-orange transition-colors duration-300 text-3xl"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <!-- Address and Contact -->
+            <div>
+                <h3 class="text-2xl font-bold mb-6 text-neon-lime-green">Contact & Location</h3>
+                <p class="text-gray-400 leading-relaxed mb-2">
+                    YumCraz Headquarters<br>
+                    123 Flavor Fusion Lane<br>
+                    Tastebud City, FC 90210<br>
+                    Global Foodie Land
+                </p>
+                <p class="text-gray-400 mb-2">Email: <a href="mailto:hello@yumcraz.com" class="hover:text-electric-orange transition-colors duration-300">hello@yumcraz.com</a></p>
+                <p class="text-gray-400">Phone: <a href="tel:+15551234567" class="hover:text-electric-orange transition-colors duration-300">+1 (555) 123-4567</a></p>
+                <div class="mt-6">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12345.67890!2d-74.0060!3d40.7128!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTHCsDQwJzM3LjkiTiA3NMKwMTUnNDEuMiJX!5e0!3m2!1sen!2sus!4v1678901234567!5m2!1sen!2sus"
+                        width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="rounded-xl shadow-lg">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+        <div class="border-t border-gray-700 mt-12 pt-8 text-center text-gray-500 text-sm">
+            &copy; 2025 YumCraz. All rights reserved. | Designed with 🧡 for Flavor Fanatics.
+        </div>
+    </footer>
+
+    <!-- Cookie Consent Banner -->
+    <div id="cookie-consent-banner" class="container mx-auto p-6 rounded-t-xl">
+        <p class="text-lg font-semibold mb-4">
+            We use cookies to enhance your YumCraz experience! These help us personalize content, analyze site traffic, and deliver relevant ads. By clicking "Accept All," you consent to our use of cookies as described in our <a href="cookies.html" class="text-electric-orange hover:underline font-bold">Cookie Policy</a>.
+        </p>
+        <div class="button-group">
+            <button class="accept" onclick="acceptCookies()">Accept All 🍪</button>
+            <button class="decline" onclick="declineCookies()">Decline All</button>
+            <button class="learn-more" onclick="window.location.href='cookies.html'">Learn More</button>
+        </div>
+    </div>
+
+    <!-- JavaScript for Cookie Consent -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const cookieBanner = document.getElementById('cookie-consent-banner');
+            const consentStatus = localStorage.getItem('yumcraz_cookie_consent');
+
+            if (!consentStatus) {
+                // If no consent status, show the banner
+                cookieBanner.style.display = 'flex';
+            }
+        });
+
+        function acceptCookies() {
+            localStorage.setItem('yumcraz_cookie_consent', 'accepted');
+            document.getElementById('cookie-consent-banner').style.display = 'none';
+            // You can add logic here to enable tracking scripts
+            console.log('Cookies accepted!');
+        }
+
+        function declineCookies() {
+            localStorage.setItem('yumcraz_cookie_consent', 'declined');
+            document.getElementById('cookie-consent-banner').style.display = 'none';
+            // You can add logic here to disable tracking scripts
+            console.log('Cookies declined!');
+        }
+    </script>
+
+    <!-- Font Awesome for Social Icons (optional, but good for visuals) -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+</html>
